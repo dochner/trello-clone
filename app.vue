@@ -1,5 +1,21 @@
+<script setup lang="ts">
+import { appName } from '~/constants'
+useHead({
+  title: appName,
+})
+</script>
+
 <template>
-  <div class="p-10 h-screen bg-blue-300 overflow-auto">
-    Hello World
-  </div>
+  <VitePwaManifest />
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
+
+<style>
+html, body , #__nuxt{
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+</style>
