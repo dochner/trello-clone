@@ -1,15 +1,13 @@
-import DropdownMenu from './DropdownMenu.vue';
-
 <template>
   <header class="w-full flex space-x-3 bg-lightBlue-600 text-white py-1.5 px-1">
     <RouterLink to="/" class="flex space-x-2 items-center">
-      <div class="h-5 w-5 i-mdi-trello" />
+      <UnoIcon class="i-mdi-trello" />
       <h1 class="fw-bold text-xl">
         Trello
       </h1>
     </RouterLink>
 
-    <div>
+    <div class="flex items-center space-x-4 flex-1">
       <DropdownMenu label="Áreas de trabalho">
         <div class="flex flex-col p-4 space-y-4">
           <div class="text-xs fw-semibold text-gray-500 text-left">
@@ -38,6 +36,12 @@ import DropdownMenu from './DropdownMenu.vue';
           </div>
         </div>
       </DropdownMenu>
+
+      <TrelloBtnCreateBoard />
+    </div>
+
+    <div class="ml-auto">
+      <TrelloAccountDropdown />
     </div>
   </header>
 </template>
